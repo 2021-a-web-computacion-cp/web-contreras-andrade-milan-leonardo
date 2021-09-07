@@ -1,4 +1,12 @@
-import { Controller, Get, HttpCode } from '@nestjs/common';
+import {
+  BadRequestException,
+  Controller,
+  Get,
+  HttpCode,
+  InternalServerErrorException,
+  Req,
+  Res,
+} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -26,5 +34,33 @@ export class AppController {
   @HttpCode(200)
   holaJSON(): string {
     return '{mensaje: "Hola json"}';
+  }
+  @Get('bad-request')
+  badRequest() {
+    throw new BadRequestException();
+  }
+  @Get('internal-error')
+  internalError() {
+    throw new InternalServerErrorException();
+  }
+  @Get('setear-cookie-insegura')
+  setearCookieInsegura(
+    @Req() req, //rquest - PETICION
+    @Res() res, //response  - RESPUESTA
+  ) {
+    res.cookie(
+      'galletaInsegura', //Nombre
+      'Tengo hambre', // Valor
+    );
+    res.send('ok'); //return de antes
+  }
+
+  @Get('mostrar-cookie')
+  mostrarCookies(@Req() req) {
+    const mensaje = {
+      sinFirmar: req.cookies,
+      formadas: req.signedCookies,
+    };
+    return mensaje;
   }
 }
