@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4a9622-51c6-4fdd-bcac-75f6bf63584d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sessions/p-M5Dxut9dDQHaz_LGCyWke96MywUC-K.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1x05fJOWP81YFxU6xIG0jrHEwKO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,6 +61,10 @@
       <workItem from="1630336956986" duration="2667000" />
       <workItem from="1630419149944" duration="6648000" />
       <workItem from="1631026931897" duration="3410000" />
+      <workItem from="1631203407688" duration="2076000" />
+      <workItem from="1631206076292" duration="2830000" />
+      <workItem from="1631289522035" duration="6442000" />
+      <workItem from="1631470533346" duration="12653000" />
     </task>
     <servers />
   </component>

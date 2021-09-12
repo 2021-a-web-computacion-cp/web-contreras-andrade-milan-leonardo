@@ -9,15 +9,16 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(express.static('publico')); //Servidor Web Estatico
   app.use(cookieParse('Me agradan los poliperros')); //Secreto Cookies
-  app.use(//Session
-  session({
-    name: 'server-session-id',
-    secret: 'no sera de tomar un traguito',
-    resave: true,
-    saveUninitialized: true,
-    cookie: { secure: false},
-    store: new FileStore,
-  }),
+  app.use(
+    //Session
+    session({
+      name: 'server-session-id',
+      secret: 'no sera de tomar un traguito',
+      resave: true,
+      saveUninitialized: true,
+      cookie: { secure: false },
+      store: new FileStore(),
+    }),
   );
   await app.listen(3000);
   //npm run start

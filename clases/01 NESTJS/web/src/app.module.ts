@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import {PrismaService} from "./prisma.service";
 
 //DECORADOR -> Funciones
 @Module({
@@ -14,6 +15,7 @@ import { AppService } from './app.service';
   providers: [
     //Servicios de este modulo
     AppService,
+    PrismaService,
   ],
   exports: [
     //Servicios exportados que se pueden usar fuera de este modulo
