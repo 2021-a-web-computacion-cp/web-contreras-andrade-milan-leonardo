@@ -25,7 +25,11 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
+##Util
+```bash
+$ npx prisma migrate dev
+$ npm install ejs
+```
 ## Installation
 
 ```bash

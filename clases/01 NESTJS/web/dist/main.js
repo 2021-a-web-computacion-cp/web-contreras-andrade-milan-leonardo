@@ -8,6 +8,7 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
+    app.set('view engine', 'ejs');
     app.use(express.static('publico'));
     app.use(cookieParse('Me agradan los poliperros'));
     app.use(session({

@@ -213,9 +213,9 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "resta", null);
 __decorate([
-    common_1.Put('multiplicacion/:numero1/:numero2'),
+    common_1.Put('multiplicacion'),
     common_1.HttpCode(200),
-    __param(0, common_1.Param()),
+    __param(0, common_1.Body()),
     __param(1, common_1.Req()),
     __param(2, common_1.Res({ passthrough: true })),
     __metadata("design:type", Function),
@@ -239,7 +239,7 @@ AppController = __decorate([
 exports.AppController = AppController;
 function operacionesMC(res, req, operacion, numero1, numero2) {
     let resultadoOperacionNumber;
-    const cookieMC = req.cookies;
+    const cookieMC = req.signedCookies;
     const valorCookie = cookieMC['cookieNumero'];
     switch (operacion) {
         case 'suma': {
@@ -261,7 +261,9 @@ function operacionesMC(res, req, operacion, numero1, numero2) {
     }
     if (valorCookie == undefined) {
         const nuevoValor = 100 - resultadoOperacionNumber;
-        res.cookie('cookieNumero', String(nuevoValor));
+        res.cookie('cookieNumero', String(nuevoValor), {
+            signed: true,
+        });
         cookieMC['cookieNumero'] = String(nuevoValor);
         console.log('Se seteo la cookie');
     }
@@ -269,12 +271,16 @@ function operacionesMC(res, req, operacion, numero1, numero2) {
         const nuevoValor = Number(valorCookie) - resultadoOperacionNumber;
         if (nuevoValor > 0) {
             cookieMC['cookieNumero'] = String(nuevoValor);
-            res.cookie('cookieNumero', String(nuevoValor));
+            res.cookie('cookieNumero', String(nuevoValor), {
+                signed: true,
+            });
             console.log('ya existe una cookie1, valor actualizado');
             console.log('Nuevo Valor: ' + cookieMC['cookieNumero']);
         }
         else {
-            res.cookie('cookieNumero', '100');
+            res.cookie('cookieNumero', '100', {
+                signed: true,
+            });
             cookieMC['cookieNumero'] = '100';
             res.send('Terminaste el juego, cookie seteada en 100');
         }

@@ -199,9 +199,9 @@ export class AppController {
     };
   }
 
-  @Put('multiplicacion/:numero1/:numero2')
+  @Put('multiplicacion')
   @HttpCode(200)
-  multiplicacion(@Param() params, @Req() req, @Res({ passthrough: true }) res) {
+  multiplicacion(@Body() params, @Req() req, @Res({ passthrough: true }) res) {
     const parametrosMC = params;
     const numero1 = Number(parametrosMC['numero1'].toString());
     const numero2 = Number(parametrosMC['numero2'].toString());
@@ -297,7 +297,7 @@ function operacionesMC(res, req, operacion, numero1, numero2) {
   //const parametrosRutaMC = params;
   let resultadoOperacionNumber: number;
 
-  const cookieMC = req.cookies;
+  const cookieMC = req.signedCookies;
   const valorCookie = cookieMC['cookieNumero'];
 
   switch (operacion) {
@@ -324,6 +324,9 @@ function operacionesMC(res, req, operacion, numero1, numero2) {
     res.cookie(
       'cookieNumero', //Nombre
       String(nuevoValor), // Valor
+      {
+        signed: true,
+      },
     );
     cookieMC['cookieNumero'] = String(nuevoValor);
     console.log('Se seteo la cookie');
@@ -331,11 +334,15 @@ function operacionesMC(res, req, operacion, numero1, numero2) {
     const nuevoValor = Number(valorCookie) - resultadoOperacionNumber;
     if (nuevoValor > 0) {
       cookieMC['cookieNumero'] = String(nuevoValor);
-      res.cookie('cookieNumero', String(nuevoValor));
+      res.cookie('cookieNumero', String(nuevoValor), {
+        signed: true,
+      });
       console.log('ya existe una cookie1, valor actualizado');
       console.log('Nuevo Valor: ' + cookieMC['cookieNumero']);
     } else {
-      res.cookie('cookieNumero', '100');
+      res.cookie('cookieNumero', '100', {
+        signed: true,
+      });
       cookieMC['cookieNumero'] = '100';
       res.send('Terminaste el juego, cookie seteada en 100');
     }
