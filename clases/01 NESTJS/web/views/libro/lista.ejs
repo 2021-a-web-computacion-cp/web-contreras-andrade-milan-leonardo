@@ -1,0 +1,63 @@
+<%- include('../comunes/cabecera')%>
+
+<div class='container'>
+    <%const existeMensaje = typeof datos.mensaje !== 'undefined'%>
+    <%if(existeMensaje){%>
+    <div class="alert alert-success" role="alert">
+        <%=datos.mensaje%>
+    </div>
+    <%}%>
+    <h1>Lista</h1>
+    <form action="/libro/lista-libros" method="get">
+        <div class="mb-3">
+            <label for="busqueda" class="form-label"> Busqueda </label>
+            <input placeholder="Ej: libro1"
+                   type="text"
+                   name="busqueda"
+                   class="form-control"
+                   id="busqueda"
+                   aria-describedby="ayudaBusqueda">
+            <div id="ayudaBusqueda" class="form-text"> Puede buscar por Nombre de libro o Autor. </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Buscar</button>
+    </form>
+    <div>
+        <a href="/libro/vista-crear">
+            <button class="btn btn-success">
+                Crear Nuevo Libro
+            </button>
+        </a>
+
+    </div>
+    <table class="table text-center" >
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Fecha Creacion</th>
+            <th scope="col">Calificacion</th>
+            <th scope="col">Leido</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% datos.libros.forEach((objeto)=> {%>
+            <tr>
+                <th><%= objeto.id%></th>
+                <th><%= objeto.nombre%></th>
+                <th><%= objeto.autor%></th>
+                <th><%= objeto.fechaCreacion%></th>
+                <th><%= objeto.calificacion%></th>
+                <th><%= objeto.leido%></th>
+                <form action='/libro/eliminar-libro/<%= objeto.id%>' method="post">
+                    <th><button class='btn btn-danger'>Eliminar</button></th>
+                </form>
+                <form action='/libro/editar-libro/<%= objeto.id%>' method="post">
+                    <th><button class="btn btn-info">Editar</button></th>
+                </form>
+            </tr>
+        <%})%>
+        </tbody>
+    </table>
+</div>
+<%- include('../comunes/footer')%>

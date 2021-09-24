@@ -6,32 +6,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.LibroModule = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const prisma_service_1 = require("./prisma.service");
-const usuario_module_1 = require("./usuario/usuario.module");
-const libro_module_1 = require("./libro/libro.module");
-let AppModule = class AppModule {
+const libro_service_1 = require("./libro.service");
+const libro_controller_1 = require("./libro.controller");
+const prisma_service_1 = require("../prisma.service");
+let LibroModule = class LibroModule {
 };
-AppModule = __decorate([
+LibroModule = __decorate([
     common_1.Module({
-        imports: [
-            usuario_module_1.UsuarioModule,
-            libro_module_1.LibroModule,
-        ],
-        controllers: [
-            app_controller_1.AppController,
-        ],
+        imports: [],
         providers: [
-            app_service_1.AppService,
+            libro_service_1.LibroService,
             prisma_service_1.PrismaService,
         ],
         exports: [
-            app_service_1.AppService,
+            libro_service_1.LibroService,
+        ],
+        controllers: [
+            libro_controller_1.LibroController,
         ],
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], LibroModule);
+exports.LibroModule = LibroModule;
+//# sourceMappingURL=libro.module.js.map

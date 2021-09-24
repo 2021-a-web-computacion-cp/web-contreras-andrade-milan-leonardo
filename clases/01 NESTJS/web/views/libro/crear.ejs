@@ -1,0 +1,72 @@
+<%- include('../comunes/cabecera')%>
+
+
+<div class='container'>
+    <%const existeMensaje = typeof datos.mensaje !== 'undefined'%>
+    <%if(existeMensaje){%>
+    <div class="alert alert-success" role="alert">
+        <%=datos.mensaje%>
+    </div>
+    <%}%>
+
+    <h1>Crear Libro</h1>
+    <form action="/libro/crear-libro-formulario" method="post">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">
+                Titulo
+            </label>
+            <input placeholder="Ej: Titulo1"
+                   type="text"
+                   name="nombre"
+                   class="form-control"
+                   id="nombre"
+                   aria-describedby="ayudaTitulo">
+            <div id="ayudaNombre" class="form-text"> Ingrese el Titulo. </div>
+        </div>
+        <div class="mb-3">
+            <label for="autor" class="form-label">
+                Autor
+            </label>
+            <input placeholder="Ej: Autor1"
+                   type="text"
+                   name="autor"
+                   class="form-control"
+                   id="autor"
+                   aria-describedby="ayudaAutor">
+            <div id="ayudaAutor" class="form-text"> Ingrese el Autor. </div>
+        </div>
+        <!--
+        <div class="mb-3">
+            <label for="fecha" class="form-label">
+                Fecha de creacion
+            </label>
+            <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                    class="form-control"
+                    aria-describedby="ayudaFecha">
+
+            <div id="ayudaFecha" class="form-text"> Ingrese la fecha. </div>
+        </div>
+        -->
+        <div class="mb-3">
+            <label for="calificacion" class="form-label">
+                Calificacion
+            </label>
+            <input placeholder="Ej: 9.5"
+                   type="text"
+                   name="calificacion"
+                   class="form-control"
+                   id="calificacion"
+                   aria-describedby="ayudaCalificacion">
+            <div id="ayudaCalificacion" class="form-text"> Ingrese la Calificacion. </div>
+        </div>
+        <div class="mb-3">
+            <label><input type="checkbox" id="leido" name="leido" value="first_checkbox"> He leído el libro</label>
+            <div id="ayudaCalificacion" class="form-text"> Indique si fue leido. </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Crear</button>
+    </form>
+</div>
+<%- include('../comunes/footer')%>

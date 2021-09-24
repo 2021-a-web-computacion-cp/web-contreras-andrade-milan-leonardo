@@ -3,12 +3,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaService } from './prisma.service';
 import { UsuarioModule } from './usuario/usuario.module';
+import { LibroModule } from './libro/libro.module';
 
 // DECORADOR -> Funciones
 @Module({
   imports: [
     // Modulos importados
     UsuarioModule,
+    LibroModule,
   ],
   controllers: [
     // Controladores de este modulo
@@ -24,5 +26,4 @@ import { UsuarioModule } from './usuario/usuario.module';
     AppService,
   ],
 })
-export class AppModule {
-}
+export class AppModule {}

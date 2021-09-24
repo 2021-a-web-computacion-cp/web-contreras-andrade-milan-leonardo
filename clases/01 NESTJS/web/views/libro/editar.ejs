@@ -1,0 +1,88 @@
+<%- include('../comunes/cabecera')%>
+
+
+<div class='container'>
+    <%const libro1 = datos.libro%>
+    <%let checked = ""%>
+    <%if(libro1.leido == true){%>
+    <%checked="checked"}%>
+    <%const dia = ('00' + libro1.fechaCreacion.getDate()).slice(-2);
+    const mes = ('00' + (libro1.fechaCreacion.getMonth()+1)).slice(-2);
+    const ano = libro1.fechaCreacion.getFullYear();%>
+
+    <%let fecha=ano+"-"+mes+"-"+dia%>
+    <%
+    const today = new Date();
+    const dd = ('00' + today.getDate()).slice(-2);
+    const mm = ('00' + (today.getMonth()+1)).slice(-2);
+    const yyyy = today.getFullYear();
+    today1 = yyyy + '-' + mm + '-' + dd;
+    %>
+
+
+    <h1>Editar Libro</h1>
+    <%=today1%>
+    <%=fecha%>
+    <form action="/libro/editar-libro-formulario/<%= datos.id%>" method="post">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">
+                Titulo
+            </label>
+            <input placeholder="Ej: Titulo1"
+                   type="text"
+                   name="nombre"
+                   class="form-control"
+                   id="nombre"
+                   aria-describedby="ayudaTitulo"
+                   value=<%=libro1.nombre%>>
+            <div id="ayudaNombre" class="form-text"> Ingrese el Titulo. </div>
+        </div>
+        <div class="mb-3">
+            <label for="autor" class="form-label">
+                Autor
+            </label>
+            <input placeholder="Ej: Autor1"
+                   type="text"
+                   name="autor"
+                   class="form-control"
+                   id="autor"
+                   aria-describedby="ayudaAutor"
+                   value=<%=libro1.autor%>>
+            <div id="ayudaAutor" class="form-text"> Ingrese el Autor. </div>
+        </div>
+        <div class="mb-3">
+            <label for="fechaCreacion" class="form-label">
+                Fecha de creacion
+            </label>
+            <input
+                    type="date"
+                    id="fechaCreacion"
+                    name="fechaCreacion"
+                    class="form-control"
+                    aria-describedby="ayudaFecha"
+                    value="<%=fecha%>"
+                    max="<%=today1%>">
+
+            <div id="ayudaFecha" class="form-text"> Ingrese la fecha. </div>
+        </div>
+        <div class="mb-3">
+            <label for="calificacion" class="form-label">
+                Calificacion
+            </label>
+            <input placeholder="Ej: 9.5"
+                   type="text"
+                   name="calificacion"
+                   class="form-control"
+                   id="calificacion"
+                   aria-describedby="ayudaCalificacion"
+                   value=<%=libro1.calificacion%>>
+            <div id="ayudaCalificacion" class="form-text"> Ingrese la Calificacion. </div>
+        </div>
+        <div class="mb-3">
+            <label><input type="checkbox" id="leido" name="leido" value="first_checkbox" <%=checked%>> He leído el libro</label>
+            <div id="ayudaCalificacion" class="form-text"> Indique si fue leido. </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Guardar</button>
+    </form>
+</div>
+<%- include('../comunes/footer')%>

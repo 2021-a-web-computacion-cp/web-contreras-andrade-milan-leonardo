@@ -3,40 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="ac4a9622-51c6-4fdd-bcac-75f6bf63584d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dist/app.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/app.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dist/app.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/app.controller.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/dist/app.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/app.module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/dist/app.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/app.module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dist/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/main.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.module.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.controller.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.controller.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.service.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/dist/usuario/usuario.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/dist/usuario/usuario.service.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/web/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sessions/5KlA0p4Y0PQKo4VynIK9OWBe5PuuY2t4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sessions/B5GyJZiZVg_K-JJ-Xs8de7CrIkdYPdNf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sessions/KIDQsWNwqx6gxuq4R43wForLrWcQmrrT.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sessions/Z2fOl-jqj0YAm07OiE2wsQcHlPQtvcSz.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sessions/k72rnLg1hgixpbUDoypqdUsEOipO52U8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sessions/qo0903cDC-nt_hIqVLimQCZcAWsZEDZb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sessions/tFT1QLcS6ra23KlsODqVpJB_L0wTW5E9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/usuario/usuario.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/usuario/usuario.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/usuario/usuario.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/usuario/usuario.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/inicio.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/inicio.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../01 NESTJS\exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,6 +88,11 @@
       <workItem from="1631628206790" duration="7065000" />
       <workItem from="1631805477991" duration="281000" />
       <workItem from="1631883666979" duration="3103000" />
+      <workItem from="1632147176547" duration="7491000" />
+      <workItem from="1632233046492" duration="6526000" />
+      <workItem from="1632412585599" duration="11633000" />
+      <workItem from="1632429227672" duration="23342000" />
+      <workItem from="1632456563667" duration="330000" />
     </task>
     <servers />
   </component>

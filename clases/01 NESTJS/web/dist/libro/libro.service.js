@@ -9,15 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsuarioService = void 0;
+exports.LibroService = void 0;
 const common_1 = require("@nestjs/common");
 const prisma_service_1 = require("../prisma.service");
-let UsuarioService = class UsuarioService {
+let LibroService = class LibroService {
     constructor(prisma) {
         this.prisma = prisma;
     }
     buscarUno(id) {
-        return this.prisma.ePN_USUARIO.findUnique({
+        return this.prisma.libro.findUnique({
             where: {
                 id: id,
             },
@@ -28,43 +28,38 @@ let UsuarioService = class UsuarioService {
             ? {
                 OR: [
                     { nombre: { contains: parametrosBusqueda.busqueda } },
-                    { apellido: { contains: parametrosBusqueda.busqueda } },
+                    { autor: { contains: parametrosBusqueda.busqueda } },
                 ],
             }
             : {};
-        return this.prisma.ePN_USUARIO.findMany({
+        return this.prisma.libro.findMany({
             where: or,
             take: Number(parametrosBusqueda.take) || undefined,
             skip: Number(parametrosBusqueda.skip) || undefined,
         });
     }
-    crearUno(usuario) {
-        return this.prisma.ePN_USUARIO.create({
-            data: usuario,
+    crearUno(libro) {
+        return this.prisma.libro.create({
+            data: libro,
         });
     }
     actualizarUno(parametrosActualizar) {
-        return this.prisma.ePN_USUARIO.update({
+        return this.prisma.libro.update({
             data: parametrosActualizar.data,
             where: {
                 id: parametrosActualizar.id,
             },
         });
     }
-    eliminarUno(where) {
-        return this.prisma.ePN_USUARIO.delete({
-            where: where,
-        });
-    }
-    eliminarUnoNew(id) {
-        return this.prisma.ePN_USUARIO.delete({
+    eliminarUno(id) {
+        return this.prisma.libro.delete({
             where: { id: id },
         });
     }
 };
-UsuarioService = __decorate([
+LibroService = __decorate([
     common_1.Injectable(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService])
-], UsuarioService);
-exports.UsuarioService = UsuarioService;
-//# sourceMappingURL=usuario.service.js.map
+], LibroService);
+exports.LibroService = LibroService;
+//# sourceMappingURL=libro.service.js.map
